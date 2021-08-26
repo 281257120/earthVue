@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: Liu Yang
  * @Date: 2020-11-05 09:43:22
- * @LastEditTime: 2021-08-17 18:00:47
+ * @LastEditTime: 2021-08-26 16:43:02
  * @LastEditors: Liu Yang
  * @FilePath: \earth-vue\vue.config.js
  */
