@@ -344,7 +344,12 @@ var µ = function () {
   function loadJson (resource) {
     if (window.location.hostname !== 'localhost' && window.location.hostname !== '192.168.1.159') {
       resource = '/earthVue' + resource
+      if (window.location.hostname === '281257120.github.io') {
+        resource = '/earthVue/dist' + resource
+      }
     }
+
+
     return new Promise((resolve, reject) => {
       let param = { "model": "CFS", "datatime": "20200819", "element": "T2", "region": "JJJ", "ftime": "t_20200820_20200829", "datatype": "ENSEMBLE_ANO", "showtype": "obs", "rowssort": "0", "csarange": "0" }
       let error
