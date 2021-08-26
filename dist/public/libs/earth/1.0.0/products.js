@@ -46,9 +46,10 @@ var products = function () {
    * @returns {String}
    */
   function gfs1p0degPath (attr, type, surface, level) {
+    var time = attr.time || ''
     var dir = attr.date, stamp = dir === "current" ? "current" : attr.hour;
     var file = [stamp, type, surface, level, "gfs", "1.0"].filter(µ.isValue).join("-") + ".json";
-    return [WEATHER_PATH, dir, file].join("/");
+    return [WEATHER_PATH, time, dir, file].join("/");
   }
 
   function gfsDate (attr) {

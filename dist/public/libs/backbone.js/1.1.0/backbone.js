@@ -369,7 +369,6 @@
       }
       this._pending = false;
       this._changing = false;
-      console.log(this)
       return this;
     },
 
@@ -444,9 +443,7 @@
     //如果服务器返回不同的属性散列，则模型的状态将再次“设置”。
     save: function (key, val, options) {
       var attrs, method, xhr, attributes = this.attributes;
-
-      console.log(key, val, options, attributes)
-
+      // console.log(key, val, options, attributes)
       // Handle both `"key", value` and `{key: value}` -style arguments.
       if (key == null || typeof key === 'object') {
         attrs = key;
@@ -457,7 +454,6 @@
 
       options = _.extend({ validate: true }, options);
 
-      console.log(options, attrs, !options.wait, !this.set(attrs, options), !this._validate(attrs, options))
       //如果我们没有等待并且属性存在，则另存为
       //带有验证的`set（attr）.save（null，opts）`。否则，请检查
       //当设置属性（如果有）时，模型将有效。
@@ -465,7 +461,6 @@
       if (attrs && !options.wait) {
         if (!this.set(attrs, options)) return false;
       } else {
-        console.log(22222222222)
         if (!this._validate(attrs, options)) return false;
       }
 

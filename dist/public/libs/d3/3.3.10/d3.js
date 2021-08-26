@@ -3556,7 +3556,6 @@ d3 = function () {
         }
       };
       function point (x, y) {
-        // console.log(x, y)
         x = project(x, y);
         stream.point(x[0], x[1]);
       }

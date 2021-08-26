@@ -69,7 +69,7 @@ svg {
 
 body {
     color: #eeeeee;
-    background: #000005;
+    background: #000005 !important;
 }
 
 #warn {
@@ -154,6 +154,7 @@ body {
   font-size: 1em;
   font-weight: 100;
 }
+
 
 #menu.invisible {
     margin-top: 0;
@@ -245,7 +246,7 @@ body {
 }
 
 .foreground-sphere {
-    stroke: #000005;
+    stroke: #000005 ;
     stroke-width: 4.0;
     fill: none;
     -moz-user-select: none;  /* Oddly, Win FF sometimes selects this SVG element. Disable. */

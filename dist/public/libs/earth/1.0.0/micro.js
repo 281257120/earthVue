@@ -104,7 +104,7 @@ var µ = function () {
   }
 
   /**
-   * @returns {Boolean} true if agent is probably a mobile device. Don't really care if this is accurate.
+   * @returns {Boolean} 如果代理可能是移动设备，则为true。不在乎这是否准确。
    */
   function isMobile () {
     return (/android|blackberry|iemobile|ipad|iphone|ipod|opera mini|webos/i).test(navigator.userAgent);
@@ -335,11 +335,13 @@ var µ = function () {
   //   });
   //   return d.promise;
   // }
-
+  var selectTime = ''
+  function getSelectTime (time) {
+    selectTime = time
+    console.log(selectTime)
+  }
 
   function loadJson (resource) {
-    console.log(resource)
-    console.log(window.location.hostname)
     if (window.location.hostname !== 'localhost' && window.location.hostname !== '192.168.1.159') {
       resource = '/earthVue' + resource
     }
@@ -352,7 +354,7 @@ var µ = function () {
         '',
         'get',
         function (result) {
-          console.log(error, 1, resource, 1, result, 4444444444)
+          console.log('更改ajax：', error, 1, resource, 1, result)
           return error ?
             !error.status ?
               reject({ status: -1, message: "Cannot load resource: " + resource, resource: resource }) :
@@ -495,7 +497,7 @@ var µ = function () {
   function newAgent (initial) {
 
     /**
-     * @returns {Function} a cancel function for a task.
+     * @returns {Function} 任务的取消功能。
      */
     function cancelFactory () {
       return function cancel () {
@@ -734,7 +736,8 @@ var µ = function () {
     distortion: distortion,
     newAgent: newAgent,
     parse: parse,
-    buildConfiguration: buildConfiguration
+    buildConfiguration: buildConfiguration,
+    getSelectTime: getSelectTime
   };
 
 }();
