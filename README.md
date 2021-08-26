@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: Liu Yang
  * @Date: 2021-08-17 13:34:15
- * @LastEditTime: 2021-08-26 17:23:38
+ * @LastEditTime: 2021-08-26 17:25:56
  * @LastEditors: Liu Yang
  * @FilePath: \earth-vue\README.md
 -->
@@ -28,6 +28,10 @@ npm run build
 npm run lint
 
 
+```
+
+### Project description
+
 本项目效果预览：https://281257120.github.io/earthVue/dist/
 
 
@@ -48,10 +52,6 @@ npm run lint
 如需详细了解、指点，请联系我：
 email: 281257120@qq.com
 
-
-
-
-```
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
