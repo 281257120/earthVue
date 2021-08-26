@@ -2,7 +2,7 @@
  * @Description: 
  * @Author: Liu Yang
  * @Date: 2020-11-05 09:43:22
- * @LastEditTime: 2021-08-26 16:43:02
+ * @LastEditTime: 2021-08-26 17:14:00
  * @LastEditors: Liu Yang
  * @FilePath: \earth-vue\vue.config.js
  */
@@ -41,6 +41,6 @@ module.exports = {
       })
     ]
   },
-  publicPath: process.env.NODE_ENV === 'production' ? './' : './',
+  publicPath: process.env.NODE_ENV === 'production' ? './earthVue' : './',
   assetsDir: "static"
 }
