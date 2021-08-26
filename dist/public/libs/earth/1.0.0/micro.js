@@ -343,9 +343,10 @@ var µ = function () {
 
   function loadJson (resource) {
     if (window.location.hostname !== 'localhost' && window.location.hostname !== '192.168.1.159') {
-      resource = '/earthVue' + resource
       if (window.location.hostname === '281257120.github.io') {
         resource = '/earthVue/dist' + resource
+      } else {
+        resource = '/earthVue' + resource
       }
     }
 
